@@ -1,22 +1,27 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
+
     defaultConfig {
-        applicationId "com.muyi.open"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -24,6 +29,10 @@ dependencies {
     testImplementation rootProject.ext.dependencies.junit
     androidTestImplementation rootProject.ext.dependencies.runner
     androidTestImplementation rootProject.ext.dependencies.espressoCore
-    implementation rootProject.ext.dependencies.appcompatV7
-    implementation rootProject.ext.dependencies.constraintLayout
+
+    api rootProject.ext.dependencies.appcompatV7
+    api rootProject.ext.dependencies.supportV4
+    api rootProject.ext.dependencies.constraintLayout
+    api rootProject.ext.dependencies.design
+    api 'com.blankj:utilcode:1.25.9'
 }
