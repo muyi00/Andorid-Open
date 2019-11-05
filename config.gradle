@@ -1,0 +1,25 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 27,          //用哪个 Android SDK 版本编译你的应用
+            minSdkVersion    : 14,          //指明应用程序运行所需的最小API level
+            targetSdkVersion : 25,          //Android 提供向前兼容的主要依据 (Android 7.1)
+    ]
+
+    dependVersion = [
+            support: "27.0.0"
+    ]
+
+    dependencies = [
+            // ------------- Android -------------
+            supportV4         : "com.android.support:support-v4:${dependVersion.support}",
+            appcompatV7       : "com.android.support:appcompat-v7:${dependVersion.support}",
+            design            : "com.android.support:design:${dependVersion.support}",
+            supportAnnotations: "com.android.support:support-annotations:${dependVersion.support}",
+            constraintLayout  : 'com.android.support.constraint:constraint-layout:1.1.3',
+            junit             : 'junit:junit:4.12',
+            runner            : 'com.android.support.test:runner:1.0.2',
+            espressoCore      : 'com.android.support.test.espresso:espresso-core:3.0.2',
+    ]
+
+}
