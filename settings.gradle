@@ -1,2 +1,3 @@
-include ':app', ':library'
-rootProject.name='Andorid-Open'
+//include ':app'
+include ':library'
+rootProject.name = 'Andorid-Open'
