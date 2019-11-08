@@ -1,16 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.muyi00'
+group = 'com.github.muyi00'
 
 android {
-    //compileSdkVersion rootProject.android.compileSdkVersion
-    compileSdkVersion 27
+    compileSdkVersion rootProject.android.compileSdkVersion
 
     defaultConfig {
-       // minSdkVersion rootProject.android.minSdkVersion
-        minSdkVersion 14
-        //targetSdkVersion rootProject.android.targetSdkVersion
-        targetSdkVersion 26
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
